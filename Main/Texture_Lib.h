@@ -5,12 +5,18 @@
  */
 #ifndef TEXTURE_LIB_H
 #define TEXTURE_LIB_H
+#define MAP_HEIGHT 14
+#define MAP_WIDTH 15
+//#define TIPSIZE 40.f
+
 
 
 //------------------------------------------------------------
 // Include
 //------------------------------------------------------------
 #include <dinput.h>
+#include <D3D9.h>
+#pragma comment (lib,"D3d9.lib")
 
 
 /**
