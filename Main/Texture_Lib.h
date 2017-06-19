@@ -7,7 +7,6 @@
 #define TEXTURE_LIB_H
 #define MAP_HEIGHT 14
 #define MAP_WIDTH 15
-//#define TIPSIZE 40.f
 
 
 
@@ -22,7 +21,7 @@
 /**
  * 頂点構造体
  */
-typedef struct _CUSTOMVERTEX
+typedef struct CUSTOMVERTEX
 {
 	float           x, y, z;	//!< 位置情報.
 	float           rhw;		//!< 頂点変換値.
