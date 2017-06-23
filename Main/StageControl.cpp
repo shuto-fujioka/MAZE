@@ -27,17 +27,24 @@ void KeyControl() {
 	//キーチェック
 	KeyCheck('D', D);
 	KeyCheck('A', A);
+
+	StageControl();
 }
 void StageControl() {
 
-	//Dキーが押されてる場合...右に回る
-	if (Key[D] == PUSH) {
-		int y;
-		int x;
+	int y;
+	int x;
+
+	for (y = 0; y < MAP_HEIGHT; y++) {
+		for (x = 0; x < MAP_WIDTH; x++) {
+			change[y][x] = map[y][x];
+		}
+	}
+	//Aキーが押されてる場合...左に回る
+	if (Key[A] == PUSH) {
 		
 		for (y = 0; y < MAP_HEIGHT; y++) {
 			for (x = 0; x < MAP_WIDTH; x++) {
-				change[y][x] = map[y][x];
 				map[y][x] = change[x][14-y];
 				if (map[y][x] == 1)
 				{
@@ -117,11 +124,10 @@ void StageControl() {
 			}
 		}
 	}
-		//Aキーが押されてる場合...左に回る
-		if (Key[A] == PUSH) {
+		//Dキーが押されてる場合...右に回る
+		if (Key[D] == PUSH) {
 			for (int y = 0; y < MAP_HEIGHT; y++) {
 				for (int x = 0; x < MAP_WIDTH; x++) {
-					change[y][x] = map[y][x];
 					map[y][x] = change[14-x][y];
 					if (map[y][x] == 1)
 					{
@@ -214,6 +220,7 @@ void StageControl() {
 			PreKey[st] = 1;
 		}
 		else {
+
 			if (PreKey[st] == 0) {
 				Key[st] = OFF;
 			}

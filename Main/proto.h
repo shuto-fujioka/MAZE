@@ -10,3 +10,5 @@ void MapLoad(const char* mapdata);
 void MapDraw();
 
 void KeyControl();
+
+void StageControl();
