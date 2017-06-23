@@ -3,6 +3,7 @@
 #include "DirectX_Lib.h"
 #include "DirectInput_Lib.h"
 #include "proto.h"
+#include "Stage.h"
 #include <stdio.h>
 
 #pragma comment(lib, "d3d9.lib")
@@ -29,6 +30,22 @@ CUSTOMVERTEX g_mapTip1[] =
 };
 // コインのチップの頂点情報
 CUSTOMVERTEX g_mapTip2[] =
+{
+	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
+	{ 475.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 0.0f },
+	{ 475.0f   , 125.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 1.0f },
+	{ 430.0f   , 125.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+};
+//ドア１のチップの頂点情報
+CUSTOMVERTEX g_mapTip3[] =
+{
+	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
+	{ 475.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 0.0f },
+	{ 475.0f   , 125.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 1.0f },
+	{ 430.0f   , 125.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+};
+//ドア2のチップの頂点情報
+CUSTOMVERTEX g_mapTip4[] =
 {
 	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
 	{ 475.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 0.0f },
@@ -62,9 +79,6 @@ void Render()
 	g_pD3Device->Present(NULL, NULL, NULL, NULL);
 	//頂点に入れるデータを設定
 	g_pD3Device->SetFVF(D3DFVF_CUSTOMVERTEX);
-}
-void load() {
-
 }
 
 // Csvの読み込み関数
@@ -121,6 +135,44 @@ void MapDraw()
 
 				// テクスチャをステージに割り当てる
 				g_pD3Device->SetTexture(0, g_pTexture[COIN_TEX]);
+				// 描画
+				g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, drawMapVertex, sizeof(CUSTOMVERTEX));
+			}
+			else if (map[y][x] == 3)
+			{
+				CUSTOMVERTEX drawMapVertex[4];
+				for (int i = 0; i < 4; i++)
+				{
+					drawMapVertex[i] = g_mapTip2[i];
+				}
+
+				for (int i = 0; i < 4; i++)
+				{
+					drawMapVertex[i].x += (x * 45.f);
+					drawMapVertex[i].y += (y * 45.f);
+				}
+
+				// テクスチャをステージに割り当てる
+				g_pD3Device->SetTexture(0, g_pTexture[DOA_TEX]);
+				// 描画
+				g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, drawMapVertex, sizeof(CUSTOMVERTEX));
+			}
+			else if (map[y][x] == 4)
+			{
+				CUSTOMVERTEX drawMapVertex[4];
+				for (int i = 0; i < 4; i++)
+				{
+					drawMapVertex[i] = g_mapTip2[i];
+				}
+
+				for (int i = 0; i < 4; i++)
+				{
+					drawMapVertex[i].x += (x * 45.f);
+					drawMapVertex[i].y += (y * 45.f);
+				}
+
+				// テクスチャをステージに割り当てる
+				g_pD3Device->SetTexture(0, g_pTexture[DOA2_TEX]);
 				// 描画
 				g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, drawMapVertex, sizeof(CUSTOMVERTEX));
 			}

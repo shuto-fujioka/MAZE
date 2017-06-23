@@ -10,8 +10,13 @@ enum TEXTURE
 	STAGE_TEX,
 	PLAYER_TEX,
 	COIN_TEX,
+	DOA_TEX,
+	DOA2_TEX,
 	TEXMAX,
 };
+
+// マップチップのデータを格納してる二次元配列
+extern int map[MAP_HEIGHT][MAP_WIDTH];
 
 //Directx関係----------------------------
 extern LPDIRECT3DTEXTURE9	  g_pTexture[TEXMAX];	        //	画像の情報を入れておく為のポインタ配列

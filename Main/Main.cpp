@@ -116,6 +116,19 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 		g_pD3Device,
 		"coin.jpg",
 		&g_pTexture[COIN_TEX]);
+	D3DXCreateTextureFromFile(
+		g_pD3Device,
+		"doa1.jpg",
+		&g_pTexture[DOA_TEX]);
+	D3DXCreateTextureFromFile(
+		g_pD3Device,
+		"doa2.jpg",
+		&g_pTexture[DOA2_TEX]);
+
+	D3DXCreateTextureFromFile(
+		g_pD3Device,
+		"Player1.png",
+		&g_pTexture[PLAYER_TEX]);
 
 	MapLoad("stage.csv");
 
@@ -137,7 +150,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 			SyncNow = timeGetTime();
 			if (SyncNow - SyncOld >= 1000 / 60) //	1•bŠÔ‚É60‰ñ‚±‚Ì’†‚É“ü‚é‚Í‚¸
 			{
+
 				Render();
+				KeyControl();
 				SyncOld = SyncNow;
 			}
 		}

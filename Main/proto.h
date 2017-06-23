@@ -8,3 +8,5 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 void MapLoad(const char* mapdata);
 
 void MapDraw();
+
+void KeyControl();

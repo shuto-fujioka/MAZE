@@ -5,7 +5,7 @@
  */
 #ifndef TEXTURE_LIB_H
 #define TEXTURE_LIB_H
-#define MAP_HEIGHT 14
+#define MAP_HEIGHT 15
 #define MAP_WIDTH 15
 
 
