@@ -15,8 +15,9 @@ struct PLAYER_STATE
 
 LPDIRECTINPUTDEVICE8  pKeyDevice = NULL;
 
-PLAYER_STATE		  g_Player = { 520.f, 695.f, 15.f };
+PLAYER_STATE		  g_Player = { 520.f, 690.f, 20.f };
 bool				  g_moveRight = true;
+
 float				  g_tu[4] = { 0,0.033,0.066,0.099 };
 float				  g_tv[2] = {0,0.055};
 int count = 0;
@@ -50,7 +51,7 @@ void PlayerControl() {
 
 		count++;
 
-		if (count > 15) {
+		if (count > 2) {
 			animecount++;
 			count = 0;
 		}
@@ -65,7 +66,7 @@ void PlayerControl() {
 		g_Player.x += MOVE_SPEED;
 		count++;
 
-		if (count > 15) {
+		if (count > 2) {
 			animecount++;
 			count = 0;
 		}
