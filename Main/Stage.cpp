@@ -5,6 +5,7 @@
 #include "proto.h"
 #include "Stage.h"
 #include <stdio.h>
+#include "Player.h"
 
 #pragma comment(lib, "d3d9.lib")
 #pragma comment(lib, "d3dx9.lib")
@@ -63,8 +64,6 @@ void Render()
 		{ 0.f,   1080.f, 1.f, 1.f, 0xFFFFFFFF, 0.f, 1.f },
 	};
 
-
-
 	//•`‰æ‚ÌŠJŽn
 	g_pD3Device->BeginScene();
 
@@ -73,6 +72,8 @@ void Render()
 	g_pD3Device->SetTexture(0, g_pTexture[STAGE_TEX]);
 	g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, g_mapTip1, sizeof(CUSTOMVERTEX));
 	MapDraw();
+	PlayerDraw();
+
 	//•`‰æ‚ÌI—¹
 	g_pD3Device->EndScene();
 	//•\Ž¦

@@ -1,3 +1,5 @@
+#pragma once
+
 // Render‚Ì‰ğ•úŠÖ”
 void Render();
 
@@ -12,3 +14,5 @@ void MapDraw();
 void KeyControl();
 
 void StageControl();
+
+void PlayerControl();

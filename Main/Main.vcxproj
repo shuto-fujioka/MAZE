@@ -157,6 +157,7 @@
     <ClInclude Include="DirectSound_Lib.h" />
     <ClInclude Include="DirectX_Lib.h" />
     <ClInclude Include="GameScene.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="proto.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="Texture_Lib.h" />
