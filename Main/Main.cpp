@@ -150,9 +150,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 			SyncNow = timeGetTime();
 			if (SyncNow - SyncOld >= 1000 / 60) //	1•bŠÔ‚É60‰ñ‚±‚Ì’†‚É“ü‚é‚Í‚¸
 			{
+				KeyControl();
+				StageControl();
 				PlayerControl();
 				Render();
-				KeyControl();
 				SyncOld = SyncNow;
 			}
 		}

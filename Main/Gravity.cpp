@@ -8,20 +8,22 @@
 #include <stdio.h>
 
 
-PLAYER_STATE Player;
-CUSTOMVERTEX desu;
-bool LandFlag = 0;
-void TexTurn(CUSTOMVERTEX* pVertex, double angle);
 
-void Gravity() {
+//—‰ºŠÔ
+int   falltime = 0;
+//d—ÍŒW”
+float GravityFactor = 0.1;
 
-	if (Key[A] == RELEASE) {
-		for (int i = 0; i < 4; i++) {
-		}
-	}
+void FallInit() {
+	falltime = 0;
 }
 
-void TexTurn(CUSTOMVERTEX * pVertex, double angle)
-{
+void FallControl(float* y) {
+	
+	falltime++;
+
+	*y += falltime * GravityFactor;
 
 }
+
+

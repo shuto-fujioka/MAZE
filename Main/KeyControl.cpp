@@ -22,9 +22,6 @@ void KeyControl() {
 	KeyCheck(VK_LEFT, LEFT);
 	KeyCheck(VK_RIGHT, RIGHT);
 
-	StageControl();
-	Gravity();
-	PlayerControl();
 }
 void KeyCheck(int VK, KEYKIND st) {
 	if ((GetKeyState(VK) & 0x8000) != 0) {

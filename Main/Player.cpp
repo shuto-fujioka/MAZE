@@ -5,9 +5,11 @@
 #include "proto.h"
 #include "Player.h"
 #include <stdio.h>
-#include"Stage.h"
+#include "Stage.h"
+#include "StageControl.h"
+#include "Gravity.h"
 
-#define MOVE_SPEED 2.0f
+#define MOVE_SPEED 1.5f
 
 
 
@@ -15,6 +17,8 @@ LPDIRECTINPUTDEVICE8  pKeyDevice = NULL;
 
 PLAYER_STATE		  g_Player = { 520.f, 690.f, 20.f };
 bool				  g_moveRight = true;
+//—Ž‰ºƒtƒ‰ƒO
+bool FallFlag = true;
 
 float				  g_tu[4] = { 0,0.033,0.066,0.099 };
 float				  g_tv[2] = {0,0.055};
@@ -41,10 +45,38 @@ void PlayerDraw(void) {
 }
 
 void PlayerControl() {
+
+	if(KeyCheck(g_Player.x , g_Player.y + g_Player.scale) == 1) 
+	{
+		FallInit();
+	}
+	else
+	{
+		FallControl(&g_Player.y);
+	}
+
+	if (Key[A] == PUSH) {
+		LeftStageTurn(&g_Player.y,&g_Player.x);
+		LeftTurn(&g_Player.y,&g_Player.x);
+	}
 	
-	
+	if (Key[D] == PUSH) {
+		RightStageTurn(&g_Player.y, &g_Player.x);
+		RightTurn(&g_Player.y, &g_Player.x);
+	}
+
+	if (Key[W] == PUSH) {
+		StageTurn(&g_Player.y, &g_Player.x);
+		Turn(&g_Player.y, &g_Player.x);
+	}
 	if (Key[LEFT] == ON) {
-		g_Player.x -= MOVE_SPEED;
+		if (KeyCheck(g_Player.x - g_Player.scale, g_Player.y - g_Player.scale) == 1) {
+
+		}
+		else 
+		{
+			g_Player.x -= MOVE_SPEED;
+		}
 
 		count++;
 
@@ -60,7 +92,13 @@ void PlayerControl() {
 	}
 
 	if (Key[RIGHT] == ON) {
-		g_Player.x += MOVE_SPEED;
+		if (KeyCheck(g_Player.x + g_Player.scale, g_Player.y ) == 1) {
+
+		}
+		else
+		{
+			g_Player.x += MOVE_SPEED;
+		}
 		count++;
 
 		if (count > 2) {

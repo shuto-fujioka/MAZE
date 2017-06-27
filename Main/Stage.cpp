@@ -21,67 +21,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 // マップチップのデータを格納してる二次元配列
 int map[MAP_HEIGHT][MAP_WIDTH];
 
-//ステージのチップの頂点情報
-CUSTOMVERTEX g_mapTip1[] =
-{
-	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
-	{ 475.0f, 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
-	{ 430.0f   , 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
-};
-// コインのチップの頂点情報
-CUSTOMVERTEX g_mapTip2[] =
-{
-	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
-	{ 475.0f, 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
-	{ 430.0f   , 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
-};
-//ドア１のチップの頂点情報
-CUSTOMVERTEX g_mapTip3[] =
-{
-	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
-	{ 475.0f, 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
-	{ 430.0f   , 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
-};
-//ドア2のチップの頂点情報
-CUSTOMVERTEX g_mapTip4[] =
 
-{
-	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
-	{ 475.0f, 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
-	{ 430.0f   , 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
-};
-void Render()
-{
-	//頂点情報を入れる--------------------------------------
-	CUSTOMVERTEX backGround[4]
-	{
-		{ 0.f,      0.f, 1.f, 1.f, 0xFFFFFFFF, 0.f, 0.f },
-		{ 1920.f,   0.f, 1.f, 1.f, 0xFFFFFFFF, 1.f, 0.f },
-		{ 1920.f,1080.f, 1.f, 1.f, 0xFFFFFFFF, 1.f, 1.f },
-		{ 0.f,   1080.f, 1.f, 1.f, 0xFFFFFFFF, 0.f, 1.f },
-	};
-
-	//描画の開始
-	g_pD3Device->BeginScene();
-
-	g_pD3Device->SetTexture(0, g_pTexture[BACKGROUND_TEX]);
-	g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, backGround, sizeof(CUSTOMVERTEX));
-	g_pD3Device->SetTexture(0, g_pTexture[STAGE_TEX]);
-	g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, g_mapTip1, sizeof(CUSTOMVERTEX));
-	MapDraw();
-	PlayerDraw();
-
-	//描画の終了
-	g_pD3Device->EndScene();
-	//表示
-	g_pD3Device->Present(NULL, NULL, NULL, NULL);
-	//頂点に入れるデータを設定
-	g_pD3Device->SetFVF(D3DFVF_CUSTOMVERTEX);
-}
 
 // Csvの読み込み関数
 void MapLoad(const char* mapdata)
@@ -180,4 +120,57 @@ void MapDraw()
 			}
 		}
 	}
+}
+
+void LeftTurn(float* y, float* x) {
+	int xNUM;
+	int yNUM;
+
+	xNUM = (*x - 430) / TIPSIZE;
+	yNUM = (*y - 80)  / TIPSIZE;
+
+	//map[y][x] = change[x][14-y];
+
+	//*y = xNUM * TIPSIZE+80;
+	//*x = (14 - yNUM) * TIPSIZE+430;
+
+	*y = (14-xNUM) * TIPSIZE + 80 ;
+	*x = yNUM      * TIPSIZE + 430;
+
+}
+
+void RightTurn(float* y, float* x) {
+	int xNUM;
+	int yNUM;
+
+	xNUM = (*x - 430) / TIPSIZE;
+	yNUM = (*y - 80) / TIPSIZE;
+
+
+	*y = xNUM        * TIPSIZE + 80 ;
+	*x = (14 - yNUM) * TIPSIZE + 430;
+
+}
+void Turn(float* y, float* x) {
+	int xNUM;
+	int yNUM;
+
+	xNUM = (*x - 430) / TIPSIZE;
+	yNUM = (*y - 80) / TIPSIZE;
+
+
+	*y = (14 - yNUM) * TIPSIZE + 80;
+	*x = (14 - xNUM) * TIPSIZE + 430;
+
+}
+
+int KeyCheck(float x, float y) {
+
+	int xNUM;
+	int yNUM;
+
+	xNUM = (x - 430) / TIPSIZE;
+	yNUM = (y - 80) / TIPSIZE;
+
+	return map[yNUM][xNUM];
 }
