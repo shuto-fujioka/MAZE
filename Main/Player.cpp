@@ -10,6 +10,7 @@
 #define MOVE_SPEED 2.0f
 
 
+
 LPDIRECTINPUTDEVICE8  pKeyDevice = NULL;
 
 PLAYER_STATE		  g_Player = { 520.f, 690.f, 20.f };
