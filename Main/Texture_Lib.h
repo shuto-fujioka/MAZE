@@ -6,7 +6,8 @@
 #ifndef TEXTURE_LIB_H
 #define TEXTURE_LIB_H
 #define MAP_HEIGHT 15
-#define MAP_WIDTH 15
+#define MAP_WIDTH  15
+#define TIPSIZE 45.f
 
 
 
@@ -17,6 +18,10 @@
 #include <D3D9.h>
 #pragma comment (lib,"D3d9.lib")
 
+struct PLAYER_STATE
+{
+	float x, y, scale;
+};
 
 /**
  * í∏ì_ç\ë¢ëÃ

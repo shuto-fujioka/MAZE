@@ -145,8 +145,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="Gravity.cpp" />
     <ClCompile Include="Hit.cpp" />
+    <ClCompile Include="KeyControl.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MapControl.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="StageControl.cpp" />
@@ -157,6 +160,7 @@
     <ClInclude Include="DirectSound_Lib.h" />
     <ClInclude Include="DirectX_Lib.h" />
     <ClInclude Include="GameScene.h" />
+    <ClInclude Include="MapControl.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="proto.h" />
     <ClInclude Include="Stage.h" />

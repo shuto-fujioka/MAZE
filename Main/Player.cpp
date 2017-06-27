@@ -6,12 +6,8 @@
 #include <stdio.h>
 #include"Stage.h"
 
-#define MOVE_SPEED 2.5f
+#define MOVE_SPEED 2.0f
 
-struct PLAYER_STATE
-{
-	float x, y, scale;
-};
 
 LPDIRECTINPUTDEVICE8  pKeyDevice = NULL;
 
@@ -43,9 +39,8 @@ void PlayerDraw(void) {
 }
 
 void PlayerControl() {
-	KeyCheck(VK_LEFT, LEFT);
-	KeyCheck(VK_RIGHT, RIGHT);
-
+	
+	
 	if (Key[LEFT] == ON) {
 		g_Player.x -= MOVE_SPEED;
 

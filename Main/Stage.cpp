@@ -24,34 +24,35 @@ int map[MAP_HEIGHT][MAP_WIDTH];
 //ステージのチップの頂点情報
 CUSTOMVERTEX g_mapTip1[] =
 {
-	{ 430.0f   , 80.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f   , 80.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 0.0f },
-	{ 475.0f   , 125.0f , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 1.0f },
-	{ 430.0f   , 125.0f , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
+	{ 475.0f, 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
+	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+	{ 430.0f   , 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
 };
 // コインのチップの頂点情報
 CUSTOMVERTEX g_mapTip2[] =
 {
-	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 0.0f },
-	{ 475.0f   , 125.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 1.0f },
-	{ 430.0f   , 125.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
+	{ 475.0f, 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
+	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+	{ 430.0f   , 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
 };
 //ドア１のチップの頂点情報
 CUSTOMVERTEX g_mapTip3[] =
 {
-	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 0.0f },
-	{ 475.0f   , 125.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 1.0f },
-	{ 430.0f   , 125.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
+	{ 475.0f, 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
+	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+	{ 430.0f   , 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
 };
 //ドア2のチップの頂点情報
 CUSTOMVERTEX g_mapTip4[] =
+
 {
-	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 0.0f },
-	{ 475.0f   , 125.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 1.0f },
-	{ 430.0f   , 125.0f  , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
+	{ 475.0f, 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
+	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+	{ 430.0f   , 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
 };
 void Render()
 {
@@ -112,8 +113,8 @@ void MapDraw()
 
 				for (int i = 0; i < 4; i++)
 				{
-					drawMapVertex[i].x += (x * 45.f);
-					drawMapVertex[i].y += (y * 45.f);
+					drawMapVertex[i].x += (x * TIPSIZE);
+					drawMapVertex[i].y += (y * TIPSIZE);
 				}
 				// テクスチャをステージに割り当てる
 				g_pD3Device->SetTexture(0, g_pTexture[STAGE_TEX]);
@@ -130,8 +131,8 @@ void MapDraw()
 
 				for (int i = 0; i < 4; i++)
 				{
-					drawMapVertex[i].x += (x * 45.f);
-					drawMapVertex[i].y += (y * 45.f);
+					drawMapVertex[i].x += (x * TIPSIZE);
+					drawMapVertex[i].y += (y * TIPSIZE);
 				}
 
 				// テクスチャをステージに割り当てる
@@ -149,8 +150,8 @@ void MapDraw()
 
 				for (int i = 0; i < 4; i++)
 				{
-					drawMapVertex[i].x += (x * 45.f);
-					drawMapVertex[i].y += (y * 45.f);
+					drawMapVertex[i].x += (x * TIPSIZE);
+					drawMapVertex[i].y += (y * TIPSIZE);
 				}
 
 				// テクスチャをステージに割り当てる
@@ -168,8 +169,8 @@ void MapDraw()
 
 				for (int i = 0; i < 4; i++)
 				{
-					drawMapVertex[i].x += (x * 45.f);
-					drawMapVertex[i].y += (y * 45.f);
+					drawMapVertex[i].x += (x * TIPSIZE);
+					drawMapVertex[i].y += (y * TIPSIZE);
 				}
 
 				// テクスチャをステージに割り当てる
