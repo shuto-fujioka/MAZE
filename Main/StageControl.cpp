@@ -4,6 +4,8 @@
 #include "DirectInput_Lib.h"
 #include "proto.h"
 #include "Stage.h"
+#include "Render.h"
+#include "KeyControl.h"
 #include <stdio.h>
 
 

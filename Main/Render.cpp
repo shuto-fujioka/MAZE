@@ -5,6 +5,7 @@
 #include "proto.h"
 #include "Player.h"
 #include <stdio.h>
+#include "Render.h"
 #include"Stage.h"
 
 //ステージのチップの頂点情報

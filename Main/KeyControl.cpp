@@ -4,6 +4,7 @@
 #include "DirectInput_Lib.h"
 #include "proto.h"
 #include "Stage.h"
+#include "KeyControl.h"
 #include <stdio.h>
 
 void KeyCheck(int VK, KEYKIND st);

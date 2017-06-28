@@ -9,91 +9,129 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    <Filter Include="ソース ファイル\Stage">
+      <UniqueIdentifier>{3cbeda38-c647-4670-a37e-5f01e01bcb88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ライブラリ">
+      <UniqueIdentifier>{82cb494e-8ee4-4cff-910d-d90bc43e8225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Main">
+      <UniqueIdentifier>{d8592eee-222f-47c5-aa63-5a39f97459c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\GameScene">
+      <UniqueIdentifier>{a2d3aca9-138b-4e34-92f5-2426a01db6eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Main\Hit">
+      <UniqueIdentifier>{5ce0336b-6522-4632-aa44-9ca7e9d4777c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Main\KeyControl">
+      <UniqueIdentifier>{ad9e8d1c-d27e-48a6-b87a-8eb21c954e8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Stage\Turn">
+      <UniqueIdentifier>{7beb950c-9b00-4188-993b-ad6978d037ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Stage\Render">
+      <UniqueIdentifier>{4157b9f6-65d6-4d4c-a398-445d78dc4ea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Player">
+      <UniqueIdentifier>{d1e0eb17-09dd-4454-a021-a9192eab6ca6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Stage\Door">
+      <UniqueIdentifier>{23e54774-4ffa-423f-9e5e-4cbc5d372b80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Player\Gravity">
+      <UniqueIdentifier>{ca2d29e5-545d-4926-8afb-3ccc5a4700c5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="GameScene.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture_Lib.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Stage.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Stage</Filter>
     </ClCompile>
     <ClCompile Include="StageControl.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Hit.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Gravity.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyControl.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="MapControl.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Render.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Stage</Filter>
     </ClCompile>
     <ClCompile Include="EndDoor.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Stage\Door</Filter>
     </ClCompile>
     <ClCompile Include="StartDoor.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Stage\Door</Filter>
+    </ClCompile>
+    <ClCompile Include="Render.cpp">
+      <Filter>ソース ファイル\Stage\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Gravity.cpp">
+      <Filter>ソース ファイル\Player\Gravity</Filter>
+    </ClCompile>
+    <ClCompile Include="Turn.cpp">
+      <Filter>ソース ファイル\Stage\Turn</Filter>
+    </ClCompile>
+    <ClCompile Include="Hit.cpp">
+      <Filter>ソース ファイル\Main\Hit</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture_Lib.cpp">
+      <Filter>ソース ファイル\ライブラリ</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyControl.cpp">
+      <Filter>ソース ファイル\Main\KeyControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>ソース ファイル\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>ソース ファイル\GameScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Texture_Lib.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectInput_Lib.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectSound_Lib.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectX_Lib.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="GameScene.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="proto.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Stage.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MapControl.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ソース ファイル\Stage</Filter>
     </ClInclude>
     <ClInclude Include="StageControl.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ソース ファイル\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Render.h">
+      <Filter>ソース ファイル\Stage\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>ソース ファイル\Player</Filter>
     </ClInclude>
     <ClInclude Include="Gravity.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ソース ファイル\Player\Gravity</Filter>
+    </ClInclude>
+    <ClInclude Include="Turn.h">
+      <Filter>ソース ファイル\Stage\Turn</Filter>
+    </ClInclude>
+    <ClInclude Include="Hit.h">
+      <Filter>ソース ファイル\Main\Hit</Filter>
     </ClInclude>
     <ClInclude Include="StartDoor.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ソース ファイル\Stage\Door</Filter>
     </ClInclude>
     <ClInclude Include="EndDoor.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ソース ファイル\Stage\Door</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectInput_Lib.h">
+      <Filter>ソース ファイル\ライブラリ</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectSound_Lib.h">
+      <Filter>ソース ファイル\ライブラリ</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX_Lib.h">
+      <Filter>ソース ファイル\ライブラリ</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture_Lib.h">
+      <Filter>ソース ファイル\ライブラリ</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyControl.h">
+      <Filter>ソース ファイル\Main\KeyControl</Filter>
+    </ClInclude>
+    <ClInclude Include="proto.h">
+      <Filter>ソース ファイル\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>ソース ファイル\GameScene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

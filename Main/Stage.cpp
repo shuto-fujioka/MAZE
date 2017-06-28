@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include "Player.h"
 #include "StartDoor.h"
+#include "Render.h"
 #include "EndDoor.h"
 
 #pragma comment(lib, "d3d9.lib")
@@ -94,55 +95,3 @@ void MapDraw()
 	}
 }
 
-void LeftTurn(float* y, float* x) {
-	int xNUM;
-	int yNUM;
-
-	xNUM = (*x - 430) / TIPSIZE;
-	yNUM = (*y - 80)  / TIPSIZE;
-
-	//map[y][x] = change[x][14-y];
-
-	//*y = xNUM * TIPSIZE+80;
-	//*x = (14 - yNUM) * TIPSIZE+430;
-
-	*y = (14-xNUM) * TIPSIZE + 80 ;
-	*x = yNUM      * TIPSIZE + 430;
-
-}
-
-void RightTurn(float* y, float* x) {
-	int xNUM;
-	int yNUM;
-
-	xNUM = (*x - 430) / TIPSIZE;
-	yNUM = (*y - 80) / TIPSIZE;
-
-
-	*y = xNUM        * TIPSIZE + 80 ;
-	*x = (14 - yNUM) * TIPSIZE + 430;
-
-}
-void Turn(float* y, float* x) {
-	int xNUM;
-	int yNUM;
-
-	xNUM = (*x - 430) / TIPSIZE;
-	yNUM = (*y - 80) / TIPSIZE;
-
-
-	*y = (14 - yNUM) * TIPSIZE + 80;
-	*x = (14 - xNUM) * TIPSIZE + 430;
-
-}
-
-int KeyCheck(float x, float y) {
-
-	int xNUM;
-	int yNUM;
-
-	xNUM = (x - 430) / TIPSIZE;
-	yNUM = (y - 80) / TIPSIZE;
-
-	return map[yNUM][xNUM];
-}

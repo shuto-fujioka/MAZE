@@ -1,5 +1,6 @@
 #include "Stage.h"
 #include "DirectX_Lib.h"
+#include "Render.h"
 #include "StartDoor.h"
 
 //ドア１のチップの頂点情報

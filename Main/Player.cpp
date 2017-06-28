@@ -6,8 +6,11 @@
 #include "Player.h"
 #include <stdio.h>
 #include "Stage.h"
+#include "Turn.h"
 #include "StageControl.h"
 #include "Gravity.h"
+#include "Hit.h"
+#include "KeyControl.h"
 
 #define MOVE_SPEED 1.5f
 
@@ -46,7 +49,7 @@ void PlayerDraw(void) {
 
 void PlayerControl() {
 
-	if(KeyCheck(g_Player.x , g_Player.y + g_Player.scale) == 1) 
+	if(HitCheck(g_Player.x , g_Player.y + g_Player.scale) == 1) 
 	{
 		FallInit();
 	}
@@ -70,7 +73,7 @@ void PlayerControl() {
 		Turn(&g_Player.y, &g_Player.x);
 	}
 	if (Key[LEFT] == ON) {
-		if (KeyCheck(g_Player.x - g_Player.scale + 5 , g_Player.y - g_Player.scale) == 1) {
+		if (HitCheck(g_Player.x - g_Player.scale + 5 , g_Player.y - g_Player.scale) == 1) {
 
 		}
 		else 
@@ -92,7 +95,7 @@ void PlayerControl() {
 	}
 
 	if (Key[RIGHT] == ON) {
-		if (KeyCheck(g_Player.x + g_Player.scale - 12.7, g_Player.y ) == 1) {
+		if (HitCheck(g_Player.x + g_Player.scale - 12.7, g_Player.y ) == 1) {
 
 		}
 		else
