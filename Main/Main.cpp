@@ -118,11 +118,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 		&g_pTexture[COIN_TEX]);
 	D3DXCreateTextureFromFile(
 		g_pD3Device,
-		"doa1.jpg",
+		"anime.png",
 		&g_pTexture[DOA_TEX]);
 	D3DXCreateTextureFromFile(
 		g_pD3Device,
-		"doa2.jpg",
+		"anime.png",
 		&g_pTexture[DOA2_TEX]);
 
 	D3DXCreateTextureFromFile(

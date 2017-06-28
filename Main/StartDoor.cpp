@@ -2,6 +2,7 @@
 #include "DirectX_Lib.h"
 #include "Render.h"
 #include "StartDoor.h"
+#include "Player.h"
 
 //ドア１のチップの頂点情報
 CUSTOMVERTEX g_StartDoaVertex1[] =

@@ -5,6 +5,10 @@ void PlayerDraw();
 
 extern PLAYER_STATE g_Player;
 
+extern float g_tu[];
+
+extern float g_tv[];
+
 extern int count;
 
 extern int animecount;

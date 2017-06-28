@@ -27,9 +27,6 @@
     <Filter Include="ソース ファイル\Main\KeyControl">
       <UniqueIdentifier>{ad9e8d1c-d27e-48a6-b87a-8eb21c954e8f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Stage\Turn">
-      <UniqueIdentifier>{7beb950c-9b00-4188-993b-ad6978d037ec}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Stage\Render">
       <UniqueIdentifier>{4157b9f6-65d6-4d4c-a398-445d78dc4ea1}</UniqueIdentifier>
     </Filter>
@@ -41,6 +38,9 @@
     </Filter>
     <Filter Include="ソース ファイル\Player\Gravity">
       <UniqueIdentifier>{ca2d29e5-545d-4926-8afb-3ccc5a4700c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Player\Turn">
+      <UniqueIdentifier>{7beb950c-9b00-4188-993b-ad6978d037ec}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -66,7 +66,7 @@
       <Filter>ソース ファイル\Player\Gravity</Filter>
     </ClCompile>
     <ClCompile Include="Turn.cpp">
-      <Filter>ソース ファイル\Stage\Turn</Filter>
+      <Filter>ソース ファイル\Player\Turn</Filter>
     </ClCompile>
     <ClCompile Include="Hit.cpp">
       <Filter>ソース ファイル\Main\Hit</Filter>
@@ -101,7 +101,7 @@
       <Filter>ソース ファイル\Player\Gravity</Filter>
     </ClInclude>
     <ClInclude Include="Turn.h">
-      <Filter>ソース ファイル\Stage\Turn</Filter>
+      <Filter>ソース ファイル\Player\Turn</Filter>
     </ClInclude>
     <ClInclude Include="Hit.h">
       <Filter>ソース ファイル\Main\Hit</Filter>
