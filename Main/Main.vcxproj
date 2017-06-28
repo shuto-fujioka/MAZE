@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EndDoor.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Gravity.cpp" />
     <ClCompile Include="Hit.cpp" />
@@ -156,14 +157,17 @@
     <ClCompile Include="Render.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="StageControl.cpp" />
+    <ClCompile Include="StartDoor.cpp" />
     <ClCompile Include="Texture_Lib.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DirectInput_Lib.h" />
     <ClInclude Include="DirectSound_Lib.h" />
     <ClInclude Include="DirectX_Lib.h" />
+    <ClInclude Include="EndDoor.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="Gravity.h" />
+    <ClInclude Include="StartDoor.h" />
     <ClInclude Include="MapControl.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="proto.h" />

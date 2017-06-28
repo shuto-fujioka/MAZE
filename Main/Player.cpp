@@ -70,7 +70,7 @@ void PlayerControl() {
 		Turn(&g_Player.y, &g_Player.x);
 	}
 	if (Key[LEFT] == ON) {
-		if (KeyCheck(g_Player.x - g_Player.scale, g_Player.y - g_Player.scale) == 1) {
+		if (KeyCheck(g_Player.x - g_Player.scale + 5 , g_Player.y - g_Player.scale) == 1) {
 
 		}
 		else 
@@ -92,7 +92,7 @@ void PlayerControl() {
 	}
 
 	if (Key[RIGHT] == ON) {
-		if (KeyCheck(g_Player.x + g_Player.scale, g_Player.y ) == 1) {
+		if (KeyCheck(g_Player.x + g_Player.scale - 12.7, g_Player.y ) == 1) {
 
 		}
 		else

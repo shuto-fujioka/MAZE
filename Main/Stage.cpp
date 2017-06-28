@@ -6,6 +6,8 @@
 #include "Stage.h"
 #include <stdio.h>
 #include "Player.h"
+#include "StartDoor.h"
+#include "EndDoor.h"
 
 #pragma comment(lib, "d3d9.lib")
 #pragma comment(lib, "d3dx9.lib")
@@ -82,41 +84,11 @@ void MapDraw()
 			}
 			else if (map[y][x] == 3)
 			{
-				CUSTOMVERTEX drawMapVertex[4];
-				for (int i = 0; i < 4; i++)
-				{
-					drawMapVertex[i] = g_mapTip2[i];
-				}
-
-				for (int i = 0; i < 4; i++)
-				{
-					drawMapVertex[i].x += (x * TIPSIZE);
-					drawMapVertex[i].y += (y * TIPSIZE);
-				}
-
-				// テクスチャをステージに割り当てる
-				g_pD3Device->SetTexture(0, g_pTexture[DOA_TEX]);
-				// 描画
-				g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, drawMapVertex, sizeof(CUSTOMVERTEX));
+				StartDoaDraw(x, y);
 			}
 			else if (map[y][x] == 4)
 			{
-				CUSTOMVERTEX drawMapVertex[4];
-				for (int i = 0; i < 4; i++)
-				{
-					drawMapVertex[i] = g_mapTip2[i];
-				}
-
-				for (int i = 0; i < 4; i++)
-				{
-					drawMapVertex[i].x += (x * TIPSIZE);
-					drawMapVertex[i].y += (y * TIPSIZE);
-				}
-
-				// テクスチャをステージに割り当てる
-				g_pD3Device->SetTexture(0, g_pTexture[DOA2_TEX]);
-				// 描画
-				g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, drawMapVertex, sizeof(CUSTOMVERTEX));
+				EndDoaDraw(x, y);
 			}
 		}
 	}
