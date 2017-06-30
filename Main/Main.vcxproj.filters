@@ -39,7 +39,7 @@
     <Filter Include="ソース ファイル\Player\Gravity">
       <UniqueIdentifier>{ca2d29e5-545d-4926-8afb-3ccc5a4700c5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Player\Turn">
+    <Filter Include="ソース ファイル\Player\Gravity\PlayerTurn">
       <UniqueIdentifier>{7beb950c-9b00-4188-993b-ad6978d037ec}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -65,9 +65,6 @@
     <ClCompile Include="Gravity.cpp">
       <Filter>ソース ファイル\Player\Gravity</Filter>
     </ClCompile>
-    <ClCompile Include="Turn.cpp">
-      <Filter>ソース ファイル\Player\Turn</Filter>
-    </ClCompile>
     <ClCompile Include="Hit.cpp">
       <Filter>ソース ファイル\Main\Hit</Filter>
     </ClCompile>
@@ -82,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="GameScene.cpp">
       <Filter>ソース ファイル\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerTurn.cpp">
+      <Filter>ソース ファイル\Player\Gravity\PlayerTurn</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -99,9 +99,6 @@
     </ClInclude>
     <ClInclude Include="Gravity.h">
       <Filter>ソース ファイル\Player\Gravity</Filter>
-    </ClInclude>
-    <ClInclude Include="Turn.h">
-      <Filter>ソース ファイル\Player\Turn</Filter>
     </ClInclude>
     <ClInclude Include="Hit.h">
       <Filter>ソース ファイル\Main\Hit</Filter>
@@ -132,6 +129,9 @@
     </ClInclude>
     <ClInclude Include="GameScene.h">
       <Filter>ソース ファイル\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerTurn.h">
+      <Filter>ソース ファイル\Player\Gravity\PlayerTurn</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

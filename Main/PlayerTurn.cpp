@@ -18,7 +18,7 @@ void LeftTurn(float* y, float* x) {
 
 
 	*y = (14 - xNUM) * TIPSIZE + 80;
-	*x = yNUM      * TIPSIZE + 430;
+	*x = yNUM      * TIPSIZE + 460;
 
 }
 
@@ -31,7 +31,7 @@ void RightTurn(float* y, float* x) {
 
 
 	*y = xNUM        * TIPSIZE + 80;
-	*x = (14 - yNUM) * TIPSIZE + 430;
+	*x = (14 - yNUM) * TIPSIZE + 450;
 
 }
 void Turn(float* y, float* x) {
@@ -43,7 +43,7 @@ void Turn(float* y, float* x) {
 
 
 	*y = (14 - yNUM) * TIPSIZE + 80;
-	*x = (14 - xNUM) * TIPSIZE + 430;
+	*x = (14 - xNUM) * TIPSIZE + 450;
 
 }
 

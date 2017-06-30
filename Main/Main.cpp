@@ -24,6 +24,7 @@ IDirect3D9*			  g_pDirect3D;		            //	Direct3Dのインターフェイス
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 {
 	switch (msg)
+
 	{
 	case WM_DESTROY:
 		PostQuitMessage(0);

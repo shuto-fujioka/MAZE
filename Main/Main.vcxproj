@@ -158,7 +158,7 @@
     <ClCompile Include="StageControl.cpp" />
     <ClCompile Include="StartDoor.cpp" />
     <ClCompile Include="Texture_Lib.cpp" />
-    <ClCompile Include="Turn.cpp" />
+    <ClCompile Include="PlayerTurn.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DirectInput_Lib.h" />
@@ -176,7 +176,7 @@
     <ClInclude Include="Stage.h" />
     <ClInclude Include="StageControl.h" />
     <ClInclude Include="Texture_Lib.h" />
-    <ClInclude Include="Turn.h" />
+    <ClInclude Include="PlayerTurn.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

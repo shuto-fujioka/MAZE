@@ -1,4 +1,4 @@
-#include "Texture_Lib.h"
+#include "Texture_Lib.h" 
 #include "GameScene.h"
 #include "DirectX_Lib.h"
 #include "DirectInput_Lib.h"
@@ -33,6 +33,7 @@ void LeftStageTurn(float* py, float* px) {
 					drawMapVertex[i].x += (x * TIPSIZE);
 					drawMapVertex[i].y += (y * TIPSIZE);
 				}
+				 
 				// テクスチャをステージに割り当てる
 				g_pD3Device->SetTexture(0, g_pTexture[STAGE_TEX]);
 				// 描画
@@ -158,7 +159,6 @@ void RightStageTurn(float* py, float* px) {
 						drawMapVertex[i].x += (x * TIPSIZE);
 						drawMapVertex[i].y += (y * TIPSIZE);
 					}
-
 					// テクスチャをステージに割り当てる
 					g_pD3Device->SetTexture(0, g_pTexture[DOA_TEX]);
 					// 描画
