@@ -104,7 +104,6 @@ void RightStageTurn(float* py, float* px) {
 	int x;
 
 	//Dキーが押されてる場合...右に回る
-	if (Key[D] == PUSH) {
 		for (int y = 0; y < MAP_HEIGHT; y++) {
 			for (int x = 0; x < MAP_WIDTH; x++) {
 				map[y][x] = change[14 - x][y];
@@ -185,16 +184,12 @@ void RightStageTurn(float* py, float* px) {
 				}
 			}
 		}
-	}
-
 }
 void StageTurn(float* py, float* px){
 	int y;
 	int x;
 
 	//Wキーが押されてる場合...180度回る
-	if (Key[W] == PUSH) {
-
 		for (y = 0; y < MAP_HEIGHT; y++) {
 			for (x = 0; x < MAP_WIDTH; x++) {
 				map[y][x] = change[14 - y][14 - x];
@@ -276,7 +271,7 @@ void StageTurn(float* py, float* px){
 			}
 		}
 	}
-}
+
 
 
 void StageControl() {

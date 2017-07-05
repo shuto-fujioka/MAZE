@@ -18,7 +18,7 @@ void LeftTurn(float* y, float* x) {
 
 
 	*y = (14 - xNUM) * TIPSIZE + 80;
-	*x = yNUM      * TIPSIZE + 460;
+	*x = yNUM      * TIPSIZE + 450;
 
 }
 

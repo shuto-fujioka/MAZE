@@ -14,3 +14,8 @@ extern int count;
 extern int animecount;
 
 extern int tvcount;
+
+extern bool FallFlag;
+
+extern bool LeftFlag;
+extern bool RightFlag;

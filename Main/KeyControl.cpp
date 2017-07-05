@@ -22,7 +22,6 @@ void KeyControl() {
 	KeyCheck('W', W);
 	KeyCheck(VK_LEFT, LEFT);
 	KeyCheck(VK_RIGHT, RIGHT);
-
 }
 void KeyCheck(int VK, KEYKIND st) {
 	if ((GetKeyState(VK) & 0x8000) != 0) {

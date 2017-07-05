@@ -60,6 +60,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 		TITLE, 							//ウィンドウのタイトル
 		WS_OVERLAPPEDWINDOW | WS_VISIBLE,	//ウィンドウスタイル
 		CW_USEDEFAULT,						// ウィンドウの横方向の位置x
+
 		CW_USEDEFAULT,						// ウィンドウの縦方向の位置y
 		DISPLAY_WIDTH,							// Width（幅）
 		DISPLAY_HIGHT,							// Height（高さ）
@@ -119,11 +120,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 		&g_pTexture[COIN_TEX]);
 	D3DXCreateTextureFromFile(
 		g_pD3Device,
-		"anime.png",
+		"door.png",
 		&g_pTexture[DOA_TEX]);
 	D3DXCreateTextureFromFile(
 		g_pD3Device,
-		"anime.png",
+		"door.png",
 		&g_pTexture[DOA2_TEX]);
 
 	D3DXCreateTextureFromFile(

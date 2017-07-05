@@ -3,3 +3,5 @@
 void FallControl(float* y);
 
 void FallInit();
+
+void Fallcheck();
