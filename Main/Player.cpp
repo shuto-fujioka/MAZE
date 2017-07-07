@@ -127,7 +127,9 @@ void PlayerControl() {
 		}
 	}
 	if (Key[UP] == PUSH) {
-		EndDoorControl();
+		if (HitCheck(g_Player.x ,g_Player.y) == 4) {
+			EndDoorControl();
+		}
 	}
 }
 
