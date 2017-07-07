@@ -152,6 +152,7 @@
     <ClCompile Include="Hit.cpp" />
     <ClCompile Include="KeyControl.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MapTurn.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Render.cpp" />
     <ClCompile Include="Stage.cpp" />

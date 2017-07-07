@@ -83,6 +83,9 @@
     <ClCompile Include="PlayerTurn.cpp">
       <Filter>ソース ファイル\Player\Gravity\PlayerTurn</Filter>
     </ClCompile>
+    <ClCompile Include="MapTurn.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stage.h">

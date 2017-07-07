@@ -116,6 +116,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 		&g_pTexture[STAGE_TEX]);
 	D3DXCreateTextureFromFile(
 		g_pD3Device,
+		"stage2.png",
+		&g_pTexture[STAGE1_TEX]);
+	D3DXCreateTextureFromFile(
+		g_pD3Device,
 		"coin.jpg",
 		&g_pTexture[COIN_TEX]);
 	D3DXCreateTextureFromFile(

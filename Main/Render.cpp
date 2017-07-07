@@ -16,6 +16,14 @@ CUSTOMVERTEX g_mapTip1[] =
 	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
 	{ 430.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
 };
+//ステージ2のチップの頂点情報
+CUSTOMVERTEX g_stageTip2[] =
+{
+	{ 430.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
+	{ 475.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
+	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+	{ 430.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
+};
 // コインのチップの頂点情報
 CUSTOMVERTEX g_mapTip2[] =
 {
