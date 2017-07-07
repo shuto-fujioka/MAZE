@@ -89,7 +89,7 @@ void MapDraw()
 			}
 			else if (map[y][x] == 4)
 			{
-				EndDoaDraw(x, y);
+				EndDoorDraw(x, y);
 			}
 		}
 	}

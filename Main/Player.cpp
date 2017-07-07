@@ -14,11 +14,9 @@
 
 #define MOVE_SPEED 1.5f
 
-
-
 LPDIRECTINPUTDEVICE8  pKeyDevice = NULL;
 
-PLAYER_STATE		  g_Player = { TIPSIZE*14 + 410.f, 690.f, 20.f };
+PLAYER_STATE		  g_Player = { TIPSIZE*14 + 410.f, 692.f, 20.f };
 bool				  g_moveRight = true;
 //—Ž‰ºƒtƒ‰ƒO
 bool FallFlag = true;
@@ -27,10 +25,10 @@ bool LeftFlag = true;
 bool RightFlag = true;
 
 float				  g_tu[4] = { 0,0.033,0.066,0.099 };
-float				  g_tv[2] = { 0,0.055 };
+float				  g_tv[2] = { 0,0.058 };
 int count = 0;
 int animecount = 0;
-int tvcount  = 1;
+int tvcount  = 0;
 
 //0.09375	//0.1277
 //0		0.055
@@ -41,7 +39,7 @@ void PlayerDraw(void) {
 	{
 		{ g_Player.x - g_Player.scale, g_Player.y - g_Player.scale, 1.f, 1.f, 0xFFFFFFFF, g_tu[animecount] , 0.f + g_tv[tvcount] },
 		{ g_Player.x + g_Player.scale, g_Player.y - g_Player.scale, 1.f, 1.f, 0xFFFFFFFF, g_tu[animecount] + g_tu[1] , 0.f + g_tv[tvcount] },
-		{ g_Player.x + g_Player.scale, g_Player.y + g_Player.scale, 1.f, 1.f, 0xFFFFFFFF, g_tu[animecount]+ g_tu[1], 0.055f + g_tv[tvcount] },
+		{ g_Player.x + g_Player.scale, g_Player.y + g_Player.scale, 1.f, 1.f, 0xFFFFFFFF, g_tu[animecount] + g_tu[1], 0.055f + g_tv[tvcount] },
 		{ g_Player.x - g_Player.scale, g_Player.y + g_Player.scale, 1.f, 1.f, 0xFFFFFFFF, g_tu[animecount] , 0.055f + g_tv[tvcount] }
 	};
 
@@ -84,7 +82,7 @@ void PlayerControl() {
 	}
 	if (Key[LEFT] == ON) {
 		if (LeftFlag == true && FallFlag == true) {
-			if (HitCheck(g_Player.x - g_Player.scale + 5, g_Player.y - g_Player.scale) == 1) {
+			if (HitCheck(g_Player.x - g_Player.scale + 7.5, g_Player.y - g_Player.scale) == 1) {
 
 			}
 			else
@@ -94,7 +92,7 @@ void PlayerControl() {
 
 			count++;
 
-			if (count > 2) {
+			if (count > 1) {
 				animecount++;
 				count = 0;
 			}
@@ -108,7 +106,7 @@ void PlayerControl() {
 
 	if (Key[RIGHT] == ON) {
 		if (RightFlag == true && FallFlag == true) {
-			if (HitCheck(g_Player.x + g_Player.scale - 12.7, g_Player.y) == 1) {
+			if (HitCheck(g_Player.x + g_Player.scale - 12.5, g_Player.y) == 1) {
 
 			}
 			else
@@ -117,7 +115,7 @@ void PlayerControl() {
 			}
 			count++;
 
-			if (count > 2) {
+			if (count > 1) {
 				animecount++;
 				count = 0;
 			}

@@ -11,11 +11,11 @@ extern D3DPRESENT_PARAMETERS  g_D3dPresentParameters;		//	パラメータ
 extern D3DDISPLAYMODE		  g_D3DdisplayMode;
 extern IDirect3D9*			  g_pDirect3D;		            //	Direct3Dのインターフェイス
 
-bool EndDoaInit(void);
+bool EndDoorInit(void);
 
-void EndDoaDraw(int x, int y);
+void EndDoorDraw(int x, int y);
 
-void EndDoaControl(void);
+void EndDoorControl(void);
 
-void EndDoaFree(void);
+void EndDoorFree(void);
 

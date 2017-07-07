@@ -27,9 +27,6 @@
     <Filter Include="ソース ファイル\Main\KeyControl">
       <UniqueIdentifier>{ad9e8d1c-d27e-48a6-b87a-8eb21c954e8f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Stage\Render">
-      <UniqueIdentifier>{4157b9f6-65d6-4d4c-a398-445d78dc4ea1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Player">
       <UniqueIdentifier>{d1e0eb17-09dd-4454-a021-a9192eab6ca6}</UniqueIdentifier>
     </Filter>
@@ -41,6 +38,9 @@
     </Filter>
     <Filter Include="ソース ファイル\Player\Gravity\PlayerTurn">
       <UniqueIdentifier>{7beb950c-9b00-4188-993b-ad6978d037ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Stage\Render">
+      <UniqueIdentifier>{4157b9f6-65d6-4d4c-a398-445d78dc4ea1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

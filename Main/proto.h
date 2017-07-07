@@ -18,3 +18,5 @@ void StageControl();
 void PlayerControl();
 
 void Gravity();
+
+void EndDoorControl();

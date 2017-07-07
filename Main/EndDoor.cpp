@@ -1,27 +1,52 @@
 #include "Stage.h"
 #include "DirectX_Lib.h"
+#include "KeyControl.h"
+#include "proto.h"
 #include "EndDoor.h"
 #include "Render.h"
 #include "Player.h"
 
-//ドア１のチップの頂点情報
-CUSTOMVERTEX g_EndDoaVertex1[] =
+float				  g_DoaTu[2] = { 0,0.5 };
+int DoaCount = 0;
+int DoaAnimeCount = 0;
+
+//ドア2のチップの頂点情報
+CUSTOMVERTEX g_mapTip4[] =
 {
-	{ 430.0f   , 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
-	{ 475.0f, 80.0f   , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
-	{ 430.0f   , 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
+	{ 430.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount], 0.0f },
+	{ 475.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount] + g_DoaTu[1], 0.0f },
+	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount] + g_DoaTu[1], 1.0f },
+	{ 430.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount], 1.0f },
 };
 
-bool EndDoaInit(void) {
+//ドア2のチップの頂点情報
+/*CUSTOMVERTEX g_mapTip4[] =
+{
+	{ 430.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
+	{ 475.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
+	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+	{ 430.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
+};
+
+//ドア2のチップの頂点情報
+CUSTOMVERTEX g_mapTip5[] =
+{
+	{ 430.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
+	{ 475.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 0.0f },
+	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 1.0f },
+	{ 430.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
+};*/
+
+bool EndDoorInit(void) {
 	return true;
 }
 
-void EndDoaDraw(int x, int y) {
+void EndDoorDraw(int x, int y) {
+
 	CUSTOMVERTEX drawMapVertex[4];
 	for (int i = 0; i < 4; i++)
 	{
-		drawMapVertex[i] = g_mapTip2[i];
+		drawMapVertex[i] = g_mapTip4[i];
 	}
 
 	for (int i = 0; i < 4; i++)
@@ -36,10 +61,12 @@ void EndDoaDraw(int x, int y) {
 	g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, drawMapVertex, sizeof(CUSTOMVERTEX));
 }
 
-void EndDoaControl(void) {
-
+void EndDoorControl(void) {
+	if (Key[UP] == PUSH) {
+		DoaAnimeCount++;
+	}
 }
 
-void EndDoaFree(void) {
+void EndDoorFree(void) {
 
 }

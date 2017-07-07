@@ -20,6 +20,7 @@ void KeyControl() {
 	KeyCheck('D', D);
 	KeyCheck('A', A);
 	KeyCheck('W', W);
+	KeyCheck(VK_UP,UP);
 	KeyCheck(VK_LEFT, LEFT);
 	KeyCheck(VK_RIGHT, RIGHT);
 }
