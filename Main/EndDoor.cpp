@@ -10,7 +10,7 @@
 
 float				  g_DoaTu[2] = { 0,0.5 };
 int DoaCount = 0;
-int DoaAnimeCount = 0;
+int DoaAnimeCount = 1;
 
 bool EndDoorInit(void) {
 	return true;
@@ -73,27 +73,25 @@ void EndDoorDraw(int x, int y) {
 }
 
 void EndDoorControl(void) {
-<<<<<<< HEAD
-	if (HitCheck(g_Player.x , g_Player.y) == 4) {
+
+	if (HitCheck(g_Player.x, g_Player.y) == 4) {
 		DoaCount++;
-=======
 
-	DoaCount++;
->>>>>>> 3e36b079f4e54ac7f37dd9e1d5540a9cb6695543
+		DoaCount++;
 
-	if (DoaCount > 0.1) {
-		DoaAnimeCount++;
-		DoaCount = 0;
-	}
+		if (DoaCount >= 1) {
+			DoaAnimeCount++;
+			DoaCount = 0;
+		}
 
-<<<<<<< HEAD
 		if (DoaAnimeCount >= 2) {
 			DoaAnimeCount = 0;
 		}
-=======
-	if (DoaAnimeCount >= 2) {
-		DoaAnimeCount = 0;
->>>>>>> 3e36b079f4e54ac7f37dd9e1d5540a9cb6695543
+
+		if (DoaAnimeCount == 0) {
+			DrawFlag = false;
+		}
+
 	}
 }
 

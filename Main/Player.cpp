@@ -12,7 +12,7 @@
 #include "Hit.h"
 #include "KeyControl.h"
 
-#define MOVE_SPEED 1.5f
+#define MOVE_SPEED 5.0f
 
 LPDIRECTINPUTDEVICE8  pKeyDevice = NULL;
 
@@ -20,6 +20,8 @@ PLAYER_STATE		  g_Player = { TIPSIZE*14 + 410.f, 692.f, 20.f };
 bool				  g_moveRight = true;
 //—Ž‰ºƒtƒ‰ƒO
 bool FallFlag = true;
+
+bool DrawFlag = true;
 
 bool LeftFlag = true;
 bool RightFlag = true;
@@ -35,6 +37,9 @@ int tvcount  = 0;
 
 
 void PlayerDraw(void) {
+
+	if (!DrawFlag) return;
+
 	CUSTOMVERTEX player[4]
 	{
 		{ g_Player.x - g_Player.scale, g_Player.y - g_Player.scale, 1.f, 1.f, 0xFFFFFFFF, g_tu[animecount] , 0.f + g_tv[tvcount] },
@@ -42,11 +47,9 @@ void PlayerDraw(void) {
 		{ g_Player.x + g_Player.scale, g_Player.y + g_Player.scale, 1.f, 1.f, 0xFFFFFFFF, g_tu[animecount] + g_tu[1], 0.055f + g_tv[tvcount] },
 		{ g_Player.x - g_Player.scale, g_Player.y + g_Player.scale, 1.f, 1.f, 0xFFFFFFFF, g_tu[animecount] , 0.055f + g_tv[tvcount] }
 	};
-
-	g_pD3Device->SetTexture(0, g_pTexture[PLAYER_TEX]);
-	g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, player, sizeof(CUSTOMVERTEX));
-
-}
+		g_pD3Device->SetTexture(0, g_pTexture[PLAYER_TEX]);
+		g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, player, sizeof(CUSTOMVERTEX));
+	}
 
 void PlayerControl() {
 

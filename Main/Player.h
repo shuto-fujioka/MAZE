@@ -17,5 +17,7 @@ extern int tvcount;
 
 extern bool FallFlag;
 
+extern bool DrawFlag;
+
 extern bool LeftFlag;
 extern bool RightFlag;
