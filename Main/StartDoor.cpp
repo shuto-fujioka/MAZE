@@ -3,6 +3,8 @@
 #include "Render.h"
 #include "StartDoor.h"
 #include "Player.h"
+#include "KeyControl.h"
+#include "MapTurn.h"
 
 //ドア1のチップの頂点情報
 CUSTOMVERTEX g_mapTip3[] =
@@ -18,6 +20,9 @@ bool StartDoaInit(void) {
 }
 
 void StartDoaDraw(int x, int y) {
+
+	static float a = 0;
+
 	CUSTOMVERTEX drawMapVertex[4];
 	for (int i = 0; i < 4; i++)
 	{
@@ -29,7 +34,31 @@ void StartDoaDraw(int x, int y) {
 		drawMapVertex[i].x += (x * TIPSIZE);
 		drawMapVertex[i].y += (y * TIPSIZE);
 	}
-
+	if (Key[A] == PUSH) {
+		if (FallFlag == true) {
+			a -= 90;
+		}
+		if (a == 360) {
+			a = 0;
+		}
+	}
+	if (Key[D] == PUSH) {
+		if (FallFlag == true) {
+			a += 90;
+		}
+		if (a == 360) {
+			a = 0;
+		}
+	}
+	if (Key[W] == PUSH) {
+		if (FallFlag == true) {
+			a += 180;
+		}
+		if (a == 360) {
+			a = 0;
+		}
+	}
+	TexRotate(drawMapVertex,a);
 	// テクスチャをステージに割り当てる
 	g_pD3Device->SetTexture(0, g_pTexture[DOA_TEX]);
 	// 描画

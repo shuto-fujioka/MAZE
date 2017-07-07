@@ -170,6 +170,7 @@
     <ClInclude Include="Gravity.h" />
     <ClInclude Include="KeyControl.h" />
     <ClInclude Include="Hit.h" />
+    <ClInclude Include="MapTurn.h" />
     <ClInclude Include="Render.h" />
     <ClInclude Include="StartDoor.h" />
     <ClInclude Include="Player.h" />

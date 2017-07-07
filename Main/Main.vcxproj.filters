@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="リソース ファイル">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="ソース ファイル\Stage">
       <UniqueIdentifier>{3cbeda38-c647-4670-a37e-5f01e01bcb88}</UniqueIdentifier>
     </Filter>
@@ -30,9 +26,6 @@
     <Filter Include="ソース ファイル\Player">
       <UniqueIdentifier>{d1e0eb17-09dd-4454-a021-a9192eab6ca6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Stage\Door">
-      <UniqueIdentifier>{23e54774-4ffa-423f-9e5e-4cbc5d372b80}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Player\Gravity">
       <UniqueIdentifier>{ca2d29e5-545d-4926-8afb-3ccc5a4700c5}</UniqueIdentifier>
     </Filter>
@@ -41,6 +34,9 @@
     </Filter>
     <Filter Include="ソース ファイル\Stage\Render">
       <UniqueIdentifier>{4157b9f6-65d6-4d4c-a398-445d78dc4ea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Main\Door">
+      <UniqueIdentifier>{23e54774-4ffa-423f-9e5e-4cbc5d372b80}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -51,10 +47,10 @@
       <Filter>ソース ファイル\Stage</Filter>
     </ClCompile>
     <ClCompile Include="EndDoor.cpp">
-      <Filter>ソース ファイル\Stage\Door</Filter>
+      <Filter>ソース ファイル\Main\Door</Filter>
     </ClCompile>
     <ClCompile Include="StartDoor.cpp">
-      <Filter>ソース ファイル\Stage\Door</Filter>
+      <Filter>ソース ファイル\Main\Door</Filter>
     </ClCompile>
     <ClCompile Include="Render.cpp">
       <Filter>ソース ファイル\Stage\Render</Filter>
@@ -107,10 +103,10 @@
       <Filter>ソース ファイル\Main\Hit</Filter>
     </ClInclude>
     <ClInclude Include="StartDoor.h">
-      <Filter>ソース ファイル\Stage\Door</Filter>
+      <Filter>ソース ファイル\Main\Door</Filter>
     </ClInclude>
     <ClInclude Include="EndDoor.h">
-      <Filter>ソース ファイル\Stage\Door</Filter>
+      <Filter>ソース ファイル\Main\Door</Filter>
     </ClInclude>
     <ClInclude Include="DirectInput_Lib.h">
       <Filter>ソース ファイル\ライブラリ</Filter>
@@ -135,6 +131,9 @@
     </ClInclude>
     <ClInclude Include="PlayerTurn.h">
       <Filter>ソース ファイル\Player\Gravity\PlayerTurn</Filter>
+    </ClInclude>
+    <ClInclude Include="MapTurn.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
