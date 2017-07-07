@@ -11,15 +11,6 @@ int DoaCount = 0;
 int DoaAnimeCount = 0;
 
 //ドア2のチップの頂点情報
-CUSTOMVERTEX g_mapTip4[] =
-{
-	{ 430.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount], 0.0f },
-	{ 475.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount] + g_DoaTu[1], 0.0f },
-	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount] + g_DoaTu[1], 1.0f },
-	{ 430.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount], 1.0f },
-};
-
-//ドア2のチップの頂点情報
 /*CUSTOMVERTEX g_mapTip4[] =
 {
 	{ 430.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
@@ -43,6 +34,15 @@ bool EndDoorInit(void) {
 
 void EndDoorDraw(int x, int y) {
 
+	//ドア2のチップの頂点情報
+	CUSTOMVERTEX g_mapTip4[] =
+	{
+		{ 430.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount], 0.0f },
+		{ 475.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount] + g_DoaTu[1], 0.0f },
+		{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount] + g_DoaTu[1], 1.0f },
+		{ 430.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, g_DoaTu[DoaAnimeCount], 1.0f },
+	};
+
 	CUSTOMVERTEX drawMapVertex[4];
 	for (int i = 0; i < 4; i++)
 	{
@@ -62,9 +62,17 @@ void EndDoorDraw(int x, int y) {
 }
 
 void EndDoorControl(void) {
-	if (Key[UP] == PUSH) {
-		DoaAnimeCount++;
-	}
+
+		DoaCount++;
+
+		if (DoaCount > 0.1) {
+			DoaAnimeCount++;
+			DoaCount = 0;
+		}
+
+		if (DoaAnimeCount >= 2) {
+			DoaAnimeCount = 0;
+		}
 }
 
 void EndDoorFree(void) {

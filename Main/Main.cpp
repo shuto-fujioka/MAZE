@@ -159,7 +159,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 				KeyControl();
 				StageControl();
 				PlayerControl();
-				EndDoorControl();
 				Render();
 				SyncOld = SyncNow;
 			}

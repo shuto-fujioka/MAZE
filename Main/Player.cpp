@@ -126,4 +126,8 @@ void PlayerControl() {
 			tvcount = 1;
 		}
 	}
+	if (Key[UP] == PUSH) {
+		EndDoorControl();
+	}
 }
+
