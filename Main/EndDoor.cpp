@@ -10,24 +10,6 @@ float				  g_DoaTu[2] = { 0,0.5 };
 int DoaCount = 0;
 int DoaAnimeCount = 0;
 
-//ドア2のチップの頂点情報
-/*CUSTOMVERTEX g_mapTip4[] =
-{
-	{ 430.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 0.0f },
-	{ 475.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
-	{ 430.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.0f, 1.0f },
-};
-
-//ドア2のチップの頂点情報
-CUSTOMVERTEX g_mapTip5[] =
-{
-	{ 430.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 0.0f },
-	{ 475.0f, 80.0f , 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 0.0f },
-	{ 475.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 1.0f, 1.0f },
-	{ 430.0f, 125.0f, 0.5f, 1.0f, 0xFFFFFFFF, 0.5f, 1.0f },
-};*/
-
 bool EndDoorInit(void) {
 	return true;
 }
@@ -63,16 +45,16 @@ void EndDoorDraw(int x, int y) {
 
 void EndDoorControl(void) {
 
-		DoaCount++;
+	DoaCount++;
 
-		if (DoaCount > 0.1) {
-			DoaAnimeCount++;
-			DoaCount = 0;
-		}
+	if (DoaCount > 0.1) {
+		DoaAnimeCount++;
+		DoaCount = 0;
+	}
 
-		if (DoaAnimeCount >= 2) {
-			DoaAnimeCount = 0;
-		}
+	if (DoaAnimeCount >= 2) {
+		DoaAnimeCount = 0;
+	}
 }
 
 void EndDoorFree(void) {
