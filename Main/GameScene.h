@@ -16,6 +16,7 @@ enum TEXTURE
 	DOA_TEX,
 	DOA2_TEX,
 	TEXMAX,
+	GAMECLEAR_TEX
 };
 
 // マップチップのデータを格納してる二次元配列

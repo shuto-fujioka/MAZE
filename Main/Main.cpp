@@ -1,6 +1,7 @@
 #include "Texture_Lib.h"
 #include "GameScene.h"
 #include "proto.h"
+#include "GameClear.h"
 #include "DirectInput_Lib.h"
 #include "DirectX_Lib.h"
 
@@ -130,11 +131,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 		g_pD3Device,
 		"door.png",
 		&g_pTexture[DOA2_TEX]);
-
 	D3DXCreateTextureFromFile(
 		g_pD3Device,
 		"anime.png",
 		&g_pTexture[PLAYER_TEX]);
+	D3DXCreateTextureFromFile(
+		g_pD3Device,
+		"gameclear.png",
+		&g_pTexture[GAMECLEAR_TEX]);
 
 	MapLoad("stage.csv");
 

@@ -21,3 +21,5 @@ extern bool DrawFlag;
 
 extern bool LeftFlag;
 extern bool RightFlag;
+
+extern bool ClearFlag;

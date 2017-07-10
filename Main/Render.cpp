@@ -6,6 +6,7 @@
 #include "Player.h"
 #include <stdio.h>
 #include "Render.h"
+#include "GameClear.h"
 #include"Stage.h"
 
 //ステージのチップの頂点情報
@@ -53,6 +54,7 @@ void Render()
 	g_pD3Device->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, g_mapTip1, sizeof(CUSTOMVERTEX));
 	MapDraw();
 	PlayerDraw();
+	GameClearRender();
 
 	//描画の終了
 	g_pD3Device->EndScene();

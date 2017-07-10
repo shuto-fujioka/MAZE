@@ -12,7 +12,7 @@
 #include "Hit.h"
 #include "KeyControl.h"
 
-#define MOVE_SPEED 5.0f
+#define MOVE_SPEED 2.0f
 
 LPDIRECTINPUTDEVICE8  pKeyDevice = NULL;
 
@@ -25,6 +25,8 @@ bool DrawFlag = true;
 
 bool LeftFlag = true;
 bool RightFlag = true;
+
+bool ClearFlag = true;
 
 float				  g_tu[4] = { 0,0.033,0.066,0.099 };
 float				  g_tv[2] = { 0,0.058 };
@@ -132,6 +134,7 @@ void PlayerControl() {
 	if (Key[UP] == PUSH) {
 		if (HitCheck(g_Player.x ,g_Player.y) == 4) {
 			EndDoorControl();
+			ClearFlag = false;
 		}
 	}
 }

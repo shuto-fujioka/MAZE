@@ -38,6 +38,9 @@
     <Filter Include="ソース ファイル\Main\Door">
       <UniqueIdentifier>{23e54774-4ffa-423f-9e5e-4cbc5d372b80}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Stage\MapTurn">
+      <UniqueIdentifier>{d6e6069e-280c-4f75-ae07-d0e58add4416}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Stage.cpp">
@@ -80,6 +83,9 @@
       <Filter>ソース ファイル\Player\Gravity\PlayerTurn</Filter>
     </ClCompile>
     <ClCompile Include="MapTurn.cpp">
+      <Filter>ソース ファイル\Stage\MapTurn</Filter>
+    </ClCompile>
+    <ClCompile Include="GameClear.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -133,6 +139,9 @@
       <Filter>ソース ファイル\Player\Gravity\PlayerTurn</Filter>
     </ClInclude>
     <ClInclude Include="MapTurn.h">
+      <Filter>ソース ファイル\Stage\MapTurn</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClear.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>

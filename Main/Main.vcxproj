@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EndDoor.cpp" />
+    <ClCompile Include="GameClear.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Gravity.cpp" />
     <ClCompile Include="Hit.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="DirectSound_Lib.h" />
     <ClInclude Include="DirectX_Lib.h" />
     <ClInclude Include="EndDoor.h" />
+    <ClInclude Include="GameClear.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="Gravity.h" />
     <ClInclude Include="KeyControl.h" />
